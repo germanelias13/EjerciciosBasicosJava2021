@@ -53,6 +53,30 @@ public class EjerciciosBasicosJava {
         //si da cualquier otro resultado
         return false;
     }
+    //saber cuando contesto al telefono
+    public boolean contesta (boolean matinal, boolean madre, boolean dormido){
+        //si estoy dormido
+        if (dormido){
+        return false;
+        }
+        
+        //si es por la mañana
+        if (matinal){
+        return false;
+        }
+        
+        //si es por la mañana y es mi madre
+        if (matinal && madre){
+        return true;
+        }
+        
+        //el resto de casos
+        return true;
+    }
+    
+    
+    
+    
     
     /**
      * @param args the command line arguments
@@ -75,6 +99,11 @@ public class EjerciciosBasicosJava {
         System.out.println(ejercicio.muyVanidoso(22));
         System.out.println(ejercicio.muyVanidoso(23));
         System.out.println(ejercicio.muyVanidoso(24));
+        
+        System.out.println("Ejercicio 04 contesta:");
+        System.out.println(ejercicio.contesta(false, false, false));
+        System.out.println(ejercicio.contesta(false, false, true));
+        System.out.println(ejercicio.contesta(true, false, false));
     }
     
 }
